@@ -5,7 +5,7 @@ import { Encryption } from './components/encryption/Encryption';
 import { numLatinLetters } from './services/CipherService';
 
 export function App() {
-  const [shift, setShift] = React.useState(19);
+  const [shift, setShift] = React.useState(0);
 
   const handleClockwiseRotation = () => {
     const newShift = (shift - 1) % numLatinLetters;
@@ -22,13 +22,13 @@ export function App() {
         <Grid item xs={12}>
           <h1>Caesar-Verschlüsselung</h1>
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={6}>
           <Cipher
             onClockwiseRotation={handleClockwiseRotation}
             onCounterClockwiseRotation={handleCounterClockwiseRotation}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} md={6}>
           <Encryption shift={shift} />
         </Grid>
       </Grid>

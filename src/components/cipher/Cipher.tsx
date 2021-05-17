@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Paper } from '@material-ui/core';
 import { CipherDisks } from './cipher-disks/CipherDisks';
 import { CipherControl } from './cipher-control/CipherControl';
 import { numLatinLetters } from '../../services/CipherService';
+import styles from './Cipher.module.css';
 
 type CipherProps = {
   onClockwiseRotation: () => void,
@@ -25,16 +26,18 @@ export function Cipher(props: CipherProps) {
   };
 
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <CipherDisks angleDeg={angleDeg} />
+    <Paper className={styles.cipher}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <CipherDisks angleDeg={angleDeg} />
+        </Grid>
+        <Grid item xs={12}>
+          <CipherControl
+            onClockwiseRotation={handleClockwiseRotation}
+            onCounterClockwiseRotation={handleCounterClockwiseRotation}
+          />
+        </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <CipherControl
-          onClockwiseRotation={handleClockwiseRotation}
-          onCounterClockwiseRotation={handleCounterClockwiseRotation}
-        />
-      </Grid>
-    </Grid>
+    </Paper>
   );
 }
