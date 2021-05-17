@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { CssBaseline } from '@material-ui/core';
 import { deDE } from '@material-ui/core/locale';
-
 import { App } from './App';
 import { reportWebVitals } from './reportWebVitals';
 
@@ -11,7 +11,10 @@ const theme = createMuiTheme({}, deDE);
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <>
+        <CssBaseline />
+        <App />
+      </>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
