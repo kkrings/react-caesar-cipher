@@ -1,28 +1,40 @@
 import * as React from 'react';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
-
-import cipherInner from './CipherInner.png';
+import { Grid } from '@material-ui/core';
+import { CipherDisks } from './cipher-disks/CipherDisks';
+import { CipherControl } from './cipher-control/CipherControl';
+import { numLatinLetters } from '../../services/CipherService';
 
 type CipherProps = {
-  angle: number
-}
+  onClockwiseRotation: () => void,
+  onCounterClockwiseRotation: () => void
+};
 
-const useStyles = makeStyles(() => createStyles({
-  rotated: {
-    transform: (props: CipherProps) => `rotate(${props.angle}deg)`
-  }
-}));
+export function Cipher(props: CipherProps) {
+  const deltaAngleDeg = 360 / numLatinLetters;
 
-export function Cipher(props : CipherProps) {
-  const rotationStyle = useStyles(props);
+  const [angleDeg, setAngleDeg] = React.useState(0);
+
+  const handleClockwiseRotation = () => {
+    setAngleDeg((angleDeg + deltaAngleDeg) % 360);
+    props.onClockwiseRotation();
+  };
+
+  const handleCounterClockwiseRotation = () => {
+    setAngleDeg((angleDeg - deltaAngleDeg) % 360);
+    props.onCounterClockwiseRotation();
+  };
 
   return (
-    <img
-      src={cipherInner}
-      alt="Chiffrierscheibe"
-      width="200"
-      height="200"
-      className={rotationStyle.rotated}
-    />
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <CipherDisks angleDeg={angleDeg} />
+      </Grid>
+      <Grid item xs={12}>
+        <CipherControl
+          onClockwiseRotation={handleClockwiseRotation}
+          onCounterClockwiseRotation={handleCounterClockwiseRotation}
+        />
+      </Grid>
+    </Grid>
   );
 }
