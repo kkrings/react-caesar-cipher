@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import { Cipher } from './components/cipher/Cipher';
-import { Encryption } from './components/encryption/Encryption';
+import { CipherMessage } from './components/cipher-message/CipherMessage';
 import { numLatinLetters } from './services/CipherService';
 
 export function App() {
@@ -29,7 +29,7 @@ export function App() {
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Encryption shift={shift} />
+          <CipherMessage shift={shift} />
         </Grid>
       </Grid>
     </Container>

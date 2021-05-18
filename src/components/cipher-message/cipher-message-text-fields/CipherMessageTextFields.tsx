@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Grid, TextField } from '@material-ui/core';
-import { CipherService } from '../../services/CipherService';
+import { CipherService } from '../../../services/CipherService';
 
-type EncryptionProps = {
+type CipherMessageTextFieldsProps = {
   shift: number
 };
 
-export function Encryption(props: EncryptionProps) {
+export function CipherMessageTextFields(props: CipherMessageTextFieldsProps) {
   const [message, setMessage] = React.useState('');
 
   const cipherService = new CipherService(props.shift);
