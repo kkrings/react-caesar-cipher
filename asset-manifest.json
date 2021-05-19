@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-caesar-cipher/static/css/main.81ebc156.chunk.css",
+    "main.js": "/react-caesar-cipher/static/js/main.ca72c5b2.chunk.js",
+    "main.js.map": "/react-caesar-cipher/static/js/main.ca72c5b2.chunk.js.map",
+    "runtime-main.js": "/react-caesar-cipher/static/js/runtime-main.3e8a15e4.js",
+    "runtime-main.js.map": "/react-caesar-cipher/static/js/runtime-main.3e8a15e4.js.map",
+    "static/js/2.c4138e74.chunk.js": "/react-caesar-cipher/static/js/2.c4138e74.chunk.js",
+    "static/js/2.c4138e74.chunk.js.map": "/react-caesar-cipher/static/js/2.c4138e74.chunk.js.map",
+    "static/js/3.6bacaeac.chunk.js": "/react-caesar-cipher/static/js/3.6bacaeac.chunk.js",
+    "static/js/3.6bacaeac.chunk.js.map": "/react-caesar-cipher/static/js/3.6bacaeac.chunk.js.map",
+    "index.html": "/react-caesar-cipher/index.html",
+    "static/css/main.81ebc156.chunk.css.map": "/react-caesar-cipher/static/css/main.81ebc156.chunk.css.map",
+    "static/js/2.c4138e74.chunk.js.LICENSE.txt": "/react-caesar-cipher/static/js/2.c4138e74.chunk.js.LICENSE.txt",
+    "static/media/CipherInnerDisk.bc459879.png": "/react-caesar-cipher/static/media/CipherInnerDisk.bc459879.png",
+    "static/media/CipherDisks.module.css": "/react-caesar-cipher/static/media/CipherOuterDisk.0304e809.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e8a15e4.js",
+    "static/js/2.c4138e74.chunk.js",
+    "static/css/main.81ebc156.chunk.css",
+    "static/js/main.ca72c5b2.chunk.js"
+  ]
+}
