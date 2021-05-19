@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Grid, Paper } from '@material-ui/core';
+import { Box, Container, Grid, Paper, Typography } from '@material-ui/core';
 import { CipherControl } from './components/cipher-control/CipherControl';
 import { CipherDisks } from './components/cipher-disks/CipherDisks';
 import { CipherMessage } from './components/cipher-message/CipherMessage';
@@ -23,16 +23,26 @@ export function App() {
     setAngleDeg((angleDeg - deltaAngleDeg) % 360);
   }
 
+  const handleReset = () => {
+    setShift(0);
+    setAngleDeg(0);
+  }
+
   return (
     <Container fixed>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <h1>Caesar-Verschlüsselung</h1>
+          <Typography variant="h4" component="h1" >
+            <Box className={styles.title}>
+              Caesar-Verschlüsselung
+            </Box>
+          </Typography>
         </Grid>
         <Grid item xs={12}>
         <CipherControl
           onClockwiseRotation={handleClockwiseRotation}
           onCounterClockwiseRotation={handleCounterClockwiseRotation}
+          onReset={handleReset}
         />
         </Grid>
         <Grid item xs={12} md={6}>
