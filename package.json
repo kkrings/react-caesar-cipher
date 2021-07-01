@@ -2,6 +2,7 @@
   "name": "react-caesar-cipher",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kkrings.github.io/react-caesar-cipher",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
