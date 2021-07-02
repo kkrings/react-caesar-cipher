@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Box, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Container, Grid, Paper } from '@material-ui/core';
+import { CipherAppBar } from './components/cipher-app-bar/CipherAppBar';
 import { CipherControl } from './components/cipher-control/CipherControl';
 import { CipherDisks } from './components/cipher-disks/CipherDisks';
 import { CipherMessage } from './components/cipher-message/CipherMessage';
@@ -29,33 +30,29 @@ export function App() {
   }
 
   return (
-    <Container fixed>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Typography variant="h4" component="h1" >
-            <Box className={styles.title}>
-              Caesar-Verschlüsselung
-            </Box>
-          </Typography>
+    <>
+      <CipherAppBar/>
+      <Container fixed>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+          <CipherControl
+            onClockwiseRotation={handleClockwiseRotation}
+            onCounterClockwiseRotation={handleCounterClockwiseRotation}
+            onReset={handleReset}
+          />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Paper className={styles.leftColumn}>
+              <CipherDisks angleDeg={angleDeg} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Paper className={styles.rightColumn}>
+              <CipherMessage shift={shift} />
+            </Paper>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-        <CipherControl
-          onClockwiseRotation={handleClockwiseRotation}
-          onCounterClockwiseRotation={handleCounterClockwiseRotation}
-          onReset={handleReset}
-        />
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper className={styles.leftColumn}>
-            <CipherDisks angleDeg={angleDeg} />
-          </Paper>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Paper className={styles.rightColumn}>
-            <CipherMessage shift={shift} />
-          </Paper>
-        </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </>
   );
 }
