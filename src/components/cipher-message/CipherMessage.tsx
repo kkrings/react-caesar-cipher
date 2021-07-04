@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Badge, Box, Tab, Tabs } from '@material-ui/core';
+import { Box, Tab, Tabs } from '@material-ui/core';
 import { Lock, LockOpen } from '@material-ui/icons';
 import { CipherMessageInput } from './CipherMessageInput';
 import { CipherDirection } from '../../types/CipherDirection';
@@ -36,15 +36,9 @@ export function CipherMessage(props: CipherMessageProps) {
         shift={props.shift}
         direction={cipherDirection}
       />
-      <Badge
-        badgeContent={props.shift}
-        color="secondary"
-        showZero
-      >
-        <Box fontWeight="bold">
-          Anzahl Verschiebungen
-        </Box>
-      </Badge>
+      <Box>
+        <Box component="span" fontWeight="bold"> Anzahl Verschiebungen:</Box> {props.shift}
+      </Box>
     </>
   );
 }
