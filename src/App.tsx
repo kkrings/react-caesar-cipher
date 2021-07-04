@@ -32,12 +32,12 @@ export function App() {
   return (
     <>
       <CipherAppBar/>
-      <Container fixed>
+      <Container>
         <Grid container spacing={2}>
           <Grid item xs={12}>
 
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} md={6}>
             <Paper className={styles.leftColumn}>
               <Grid container spacing={1}>
                 <Grid item xs={12}>
@@ -53,7 +53,7 @@ export function App() {
               </Grid>
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} md={6}>
             <Paper className={styles.rightColumn}>
               <CipherMessage shift={shift} />
             </Paper>
