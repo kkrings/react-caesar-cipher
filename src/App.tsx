@@ -34,11 +34,8 @@ export function App() {
       <CipherAppBar/>
       <Container>
         <Grid container spacing={2}>
-          <Grid item xs={12}>
-
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Paper className={styles.leftColumn}>
+          <Grid item xs={12} md={5}>
+            <Paper className={styles.column}>
               <Grid container spacing={1}>
                 <Grid item xs={12}>
                   <CipherDisks angleDeg={angleDeg} />
@@ -53,8 +50,8 @@ export function App() {
               </Grid>
             </Paper>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Paper className={styles.rightColumn}>
+          <Grid item xs={12} md={7}>
+            <Paper className={styles.column}>
               <CipherMessage shift={shift} />
             </Paper>
           </Grid>
