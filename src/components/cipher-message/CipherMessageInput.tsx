@@ -22,6 +22,7 @@ export function CipherMessageInput(props: CipherMessageInputProps) {
     <Box padding="1rem 0">
       <Box margin="1rem 0">
         <TextField
+          id="message"
           className={styles.cipherMessageInput}
           value={message}
           onChange={(event) => setMessage(event.target.value)}
@@ -34,6 +35,7 @@ export function CipherMessageInput(props: CipherMessageInputProps) {
       </Box>
       <Box margin="1rem 0">
         <TextField
+          id="transformed-message"
           className={styles.cipherMessageInput}
           value={cipherService.transformMessage(message)}
           variant="outlined"
