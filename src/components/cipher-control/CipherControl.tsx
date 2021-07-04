@@ -11,13 +11,23 @@ type CipherControlProps = {
 export function CipherControl(props: CipherControlProps) {
   return (
     <Box textAlign="center">
-      <IconButton onClick={props.onClockwiseRotation}>
+      <IconButton
+        onClick={props.onClockwiseRotation}
+        aria-label="Im Uhrzeigersinn"
+      >
         <RotateRight />
       </IconButton>
-      <IconButton onClick={props.onCounterClockwiseRotation}>
+      <IconButton
+        onClick={props.onCounterClockwiseRotation}
+        aria-label="Gegen den Uhrzeigersinn"
+      >
         <RotateLeft />
       </IconButton>
-      <IconButton onClick={props.onReset} color="secondary">
+      <IconButton
+        onClick={props.onReset}
+        aria-label="Auf Anfang"
+        color="secondary"
+      >
         <Autorenew />
       </IconButton>
     </Box>
