@@ -17,17 +17,17 @@ export function App() {
     const newShift = (shift - 1) % numLatinLetters;
     setShift(newShift >= 0 ? newShift : numLatinLetters + newShift);
     setAngleDeg((angleDeg + deltaAngleDeg) % 360);
-  }
+  };
 
   const handleCounterClockwiseRotation = () => {
     setShift((shift + 1) % numLatinLetters);
     setAngleDeg((angleDeg - deltaAngleDeg) % 360);
-  }
+  };
 
   const handleReset = () => {
     setShift(0);
     setAngleDeg(0);
-  }
+  };
 
   return (
     <>

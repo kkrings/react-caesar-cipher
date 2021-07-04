@@ -6,7 +6,7 @@ type CipherControlProps = {
   onClockwiseRotation: () => void
   onCounterClockwiseRotation: () => void
   onReset: () => void
-}
+};
 
 export function CipherControl(props: CipherControlProps) {
   return (

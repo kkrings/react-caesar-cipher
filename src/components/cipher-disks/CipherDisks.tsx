@@ -6,7 +6,7 @@ import styles from './CipherDisks.module.css';
 
 type CipherDisksProps = {
   angleDeg: number
-}
+};
 
 const useStyles = makeStyles(() => createStyles({
   rotated: {
