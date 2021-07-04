@@ -35,15 +35,22 @@ export function App() {
       <Container fixed>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-          <CipherControl
-            onClockwiseRotation={handleClockwiseRotation}
-            onCounterClockwiseRotation={handleCounterClockwiseRotation}
-            onReset={handleReset}
-          />
+
           </Grid>
           <Grid item xs={12} md={6}>
             <Paper className={styles.leftColumn}>
-              <CipherDisks angleDeg={angleDeg} />
+              <Grid container spacing={1}>
+                <Grid item xs={12}>
+                  <CipherDisks angleDeg={angleDeg} />
+                </Grid>
+                <Grid item xs={12}>
+                  <CipherControl
+                    onClockwiseRotation={handleClockwiseRotation}
+                    onCounterClockwiseRotation={handleCounterClockwiseRotation}
+                    onReset={handleReset}
+                  />
+                </Grid>
+              </Grid>
             </Paper>
           </Grid>
           <Grid item xs={12} md={6}>
