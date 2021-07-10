@@ -7,7 +7,7 @@ describe('CipherDisks', () => {
 
   beforeEach(() => {
     render(<CipherDisks angleDeg={angleDeg} />);
-  })
+  });
 
   it('style should contain transform property', () => {
     expect(screen.getByRole('img')).toHaveStyle({transform: `rotate(${angleDeg}deg)`});

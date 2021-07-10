@@ -11,7 +11,9 @@ export function CipherAppBarInfoMenu(props: CipherAppBarInfoMenuProps) {
   return (
     <Paper className={styles.infoMenu}>
       <Box textAlign="right">
-        <IconButton onClick={props.onCloseButtonClick}><Close /></IconButton>
+        <IconButton role="close" onClick={props.onCloseButtonClick}>
+          <Close />
+        </IconButton>
       </Box>
       <Typography variant="h6">Datenschutzerklärung</Typography>
       <Typography variant="body2" paragraph={true}>
