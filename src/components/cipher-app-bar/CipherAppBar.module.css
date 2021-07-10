@@ -1,3 +1,9 @@
 .title {
   flex-grow: 1;
 }
+
+.infoMenu {
+  max-width: 500px;
+  margin: 1rem;
+  padding: 1rem;
+}

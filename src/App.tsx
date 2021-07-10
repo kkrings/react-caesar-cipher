@@ -31,7 +31,7 @@ export function App() {
 
   return (
     <>
-      <CipherAppBar/>
+      <CipherAppBar />
       <Container>
         <Grid container spacing={2}>
           <Grid item xs={12} md={5}>
