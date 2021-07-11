@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { CipherAppBar } from './CipherAppBar';
 
-describe('CipherAppBarInfoMenu', () => {
+describe('CipherAppBar', () => {
   beforeEach(() => {
     render(<CipherAppBar />);
   });
