@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AppBar, IconButton, Popper, Toolbar, Typography } from '@material-ui/core';
 import { GitHub, Info } from '@material-ui/icons';
-import { CipherAppBarInfoMenu } from './CipherAppBarInfoMenu';
+import { CipherAppBarInfoMenu } from './cipher-app-bar-info-menu/CipherAppBarInfoMenu';
 import styles from './CipherAppBar.module.css';
 
 export function CipherAppBar() {

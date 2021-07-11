@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, IconButton, Paper, Typography } from '@material-ui/core';
 import { Close } from '@material-ui/icons';
-import styles from './CipherAppBar.module.css';
+import styles from './CipherAppBarInfoMenu.module.css';
 
 type CipherAppBarInfoMenuProps = {
   onCloseButtonClick: () => void
