@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Tab, Tabs } from '@material-ui/core';
 import { Lock, LockOpen } from '@material-ui/icons';
-import { CipherMessageInput } from './CipherMessageInput';
+import { CipherMessageInput } from './cipher-message-input/CipherMessageInput';
 import { CipherDirection } from '../../types/CipherDirection';
 
 type CipherMessageProps = {

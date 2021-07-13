@@ -2,8 +2,8 @@ import * as React from 'react';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 import { CipherMessageInput } from './CipherMessageInput';
-import { CipherService } from '../../services/CipherService';
-import { CipherDirection } from '../../types/CipherDirection';
+import { CipherService } from '../../../services/CipherService';
+import { CipherDirection } from '../../../types/CipherDirection';
 
 describe('CipherMessageInput', () => {
   const shift = 1;
