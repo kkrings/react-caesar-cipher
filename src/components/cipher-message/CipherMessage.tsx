@@ -16,17 +16,22 @@ export function CipherMessage(props: CipherMessageProps) {
   return (
     <>
       <Tabs
+        aria-label="Geheime Nachricht verschlüsseln/entschlüsseln"
         value={cipherDirection}
         onChange={(_, direction) => setCipherDirection(direction)}
         variant="fullWidth"
         indicatorColor="primary"
       >
         <Tab
+          id="encrypt-tab"
+          aria-controls="encrypt-tabpanel"
           icon={<Lock />}
           label="Verschlüsseln"
           value={CipherDirection.encrypt}
         />
         <Tab
+          id="decrypt-tab"
+          aria-controls="decrypt-tabpanel"
           icon={<LockOpen />}
           label="Entschlüsseln"
           value={CipherDirection.decrypt}
@@ -36,7 +41,7 @@ export function CipherMessage(props: CipherMessageProps) {
         shift={props.shift}
         direction={cipherDirection}
       />
-      <div>
+      <div data-testid="shift">
         <strong>Anzahl Verschiebungen:</strong> {props.shift}
       </div>
     </>

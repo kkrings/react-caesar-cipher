@@ -19,7 +19,12 @@ export function CipherMessageInput(props: CipherMessageInputProps) {
   );
 
   return (
-    <Box padding="1rem 0">
+    <Box
+      role="tabpanel"
+      id={`${encrypt ? 'encrypt' : 'decrypt'}-tabpanel`}
+      aria-labelledby={`${encrypt ? 'encrypt' : 'decrypt'}-tab`}
+      padding="1rem 0"
+    >
       <Box margin="1rem 0">
         <TextField
           id="message"
