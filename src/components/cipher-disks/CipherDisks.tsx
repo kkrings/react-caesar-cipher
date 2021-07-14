@@ -20,6 +20,7 @@ export function CipherDisks(props : CipherDisksProps) {
   return (
     <Box className={styles.cipherOuterDisk}>
       <img
+        id="cipher-disk"
         src={cipherInnerDisk}
         alt="Chiffrierscheibe"
         width="100%"

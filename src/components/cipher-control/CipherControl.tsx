@@ -14,18 +14,21 @@ export function CipherControl(props: CipherControlProps) {
       <IconButton
         onClick={props.onClockwiseRotation}
         aria-label="Im Uhrzeigersinn"
+        aria-controls="cipher-disk"
       >
         <RotateRight />
       </IconButton>
       <IconButton
         onClick={props.onCounterClockwiseRotation}
         aria-label="Gegen den Uhrzeigersinn"
+        aria-controls="cipher-disk"
       >
         <RotateLeft />
       </IconButton>
       <IconButton
         onClick={props.onReset}
         aria-label="Auf Anfang"
+        aria-controls="cipher-disk"
         color="secondary"
       >
         <Autorenew />
