@@ -21,7 +21,7 @@ export class CipherService {
     return letter;
   }
 
-  private transformLatinLetter(letter: string, offset = 'A'): string {
+  private transformLatinLetter(letter: string, offset: string): string {
     const charCodeOffset = offset.charCodeAt(0);
 
     let shift = (
