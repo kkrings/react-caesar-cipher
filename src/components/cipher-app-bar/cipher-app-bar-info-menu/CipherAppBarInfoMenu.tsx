@@ -22,13 +22,12 @@ export function CipherAppBarInfoMenu(props: CipherAppBarInfoMenuProps) {
       </Typography>
       <Typography variant="h6">Lizenz</Typography>
       <Typography variant="body2" paragraph={true}>
-        To the extent possible under law, Kai Krings has waived all copyright and related
-        or neighboring rights to Caesar-Verschlüsselung. This work is published from:
-        Deutschland.
+        Soweit gesetzlich möglich, hat Kai Krings auf alle Urheber- und verwandte
+        Schutzrechte für diese Applikation verzichtet.
       </Typography>
       <a
         rel="license"
-        href="http://creativecommons.org/publicdomain/zero/1.0/"
+        href="http://creativecommons.org/publicdomain/zero/1.0/deed.de"
       >
         <img
           src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
