@@ -14,7 +14,7 @@ export function CipherAppBar() {
           Caesar-Verschlüsselung
         </Typography>
         <IconButton
-          aria-label="Datenschutzerklärung"
+          aria-label="Datenschutzerklärung, Lizenz"
           aria-controls="info-popup"
           aria-haspopup="true"
           color="inherit"
