@@ -14,7 +14,7 @@ describe('CipherAppBar', () => {
 
   describe('click on info button', () => {
     beforeEach(() => {
-      userEvent.click(screen.getByLabelText('Datenschutzerklärung'));
+      userEvent.click(screen.getByLabelText('Datenschutzerklärung, Lizenz'));
     });
 
     it('info popup should have been opened', () => {
@@ -24,7 +24,7 @@ describe('CipherAppBar', () => {
 
   describe('click on info button when info popup is open', () => {
     beforeEach(() => {
-      const button = screen.getByLabelText('Datenschutzerklärung')
+      const button = screen.getByLabelText('Datenschutzerklärung, Lizenz')
       userEvent.click(button);
       userEvent.click(button);
     });
@@ -36,7 +36,7 @@ describe('CipherAppBar', () => {
 
   describe('click on close button', () => {
     beforeEach(() => {
-      userEvent.click(screen.getByLabelText('Datenschutzerklärung'));
+      userEvent.click(screen.getByLabelText('Datenschutzerklärung, Lizenz'));
     });
 
     beforeEach(() => {
