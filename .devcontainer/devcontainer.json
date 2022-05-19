@@ -1,0 +1,17 @@
+{
+	"name": "react-caesar-cipher",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			"VARIANT": "16-bullseye"
+		}
+	},
+	"settings": {
+		"editor.renderWhitespace": "all",
+		"editor.rulers": [80]
+	},
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
+	"remoteUser": "node"
+}
