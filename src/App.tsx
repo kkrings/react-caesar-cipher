@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Grid, Paper } from '@material-ui/core';
+import { Container, Grid, Paper } from '@mui/material';
 import { CipherAppBar } from './components/cipher-app-bar/CipherAppBar';
 import { CipherControl } from './components/cipher-control/CipherControl';
 import { CipherDisks } from './components/cipher-disks/CipherDisks';

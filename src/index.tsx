@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { CssBaseline } from '@material-ui/core';
-import { deDE } from '@material-ui/core/locale';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { CssBaseline } from '@mui/material';
+import { deDE } from '@mui/material/locale';
 import { App } from './App';
 import { reportWebVitals } from './reportWebVitals';
 
-const theme = createMuiTheme({}, deDE);
+const theme = createTheme(undefined, deDE);
 
 ReactDOM.render(
   <React.StrictMode>

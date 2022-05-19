@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box, IconButton, Paper, Typography } from '@material-ui/core';
-import { Close } from '@material-ui/icons';
+import { Box, IconButton, Paper, Typography } from '@mui/material';
+import { Close } from '@mui/icons-material';
 import styles from './CipherAppBarInfoMenu.module.css';
 
 type CipherAppBarInfoMenuProps = {
@@ -11,7 +11,7 @@ export function CipherAppBarInfoMenu(props: CipherAppBarInfoMenuProps) {
   return (
     <Paper className={styles.infoMenu}>
       <Box textAlign="right">
-        <IconButton role="close" onClick={props.onCloseButtonClick}>
+        <IconButton role="close" onClick={props.onCloseButtonClick} size="large">
           <Close />
         </IconButton>
       </Box>

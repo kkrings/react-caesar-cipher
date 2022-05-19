@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Tab, Tabs } from '@material-ui/core';
-import { Lock, LockOpen } from '@material-ui/icons';
+import { Tab, Tabs } from '@mui/material';
+import { Lock, LockOpen } from '@mui/icons-material';
 import { CipherMessageInput } from './cipher-message-input/CipherMessageInput';
 import { CipherDirection } from '../../types/CipherDirection';
 

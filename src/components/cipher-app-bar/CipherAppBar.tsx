@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { AppBar, IconButton, Popper, Toolbar, Typography } from '@material-ui/core';
-import { GitHub, Info } from '@material-ui/icons';
+import { AppBar, IconButton, Popper, Toolbar, Typography } from '@mui/material';
+import { GitHub, Info } from '@mui/icons-material';
 import { CipherAppBarInfoMenu } from './cipher-app-bar-info-menu/CipherAppBarInfoMenu';
 import styles from './CipherAppBar.module.css';
 
@@ -21,7 +21,7 @@ export function CipherAppBar() {
           onClick={
             (event) => setInfoAnchor(infoAnchor === null ? event.currentTarget : null)
           }
-        >
+          size="large">
           <Info />
         </IconButton>
         <Popper
@@ -34,7 +34,7 @@ export function CipherAppBar() {
         <IconButton
           color="inherit"
           href="https://github.com/kkrings/react-caesar-cipher"
-        >
+          size="large">
           <GitHub />
         </IconButton>
       </Toolbar>

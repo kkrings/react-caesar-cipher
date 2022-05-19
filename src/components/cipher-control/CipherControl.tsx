@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Box, IconButton } from '@material-ui/core';
-import { Autorenew, RotateLeft, RotateRight } from '@material-ui/icons';
+import { Box, IconButton } from '@mui/material';
+import { Autorenew, RotateLeft, RotateRight } from '@mui/icons-material';
 
 type CipherControlProps = {
   onClockwiseRotation: () => void
@@ -15,14 +15,14 @@ export function CipherControl(props: CipherControlProps) {
         onClick={props.onClockwiseRotation}
         aria-label="Im Uhrzeigersinn"
         aria-controls="cipher-disk"
-      >
+        size="large">
         <RotateRight />
       </IconButton>
       <IconButton
         onClick={props.onCounterClockwiseRotation}
         aria-label="Gegen den Uhrzeigersinn"
         aria-controls="cipher-disk"
-      >
+        size="large">
         <RotateLeft />
       </IconButton>
       <IconButton
@@ -30,7 +30,7 @@ export function CipherControl(props: CipherControlProps) {
         aria-label="Auf Anfang"
         aria-controls="cipher-disk"
         color="secondary"
-      >
+        size="large">
         <Autorenew />
       </IconButton>
     </Box>

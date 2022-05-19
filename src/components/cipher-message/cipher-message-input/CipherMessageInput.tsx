@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, TextField } from '@material-ui/core';
+import { Box, TextField } from '@mui/material';
 import { CipherDirection } from '../../../types/CipherDirection';
 import { CipherService } from '../../../services/CipherService';
 import styles from './CipherMessageInput.module.css';
