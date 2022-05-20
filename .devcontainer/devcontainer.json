@@ -8,10 +8,20 @@
 	},
 	"settings": {
 		"editor.renderWhitespace": "all",
-		"editor.rulers": [80]
+		"editor.rulers": [80],
+		"[css]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		},
+		"[typescriptreact]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode"
+		}
 	},
 	"extensions": [
-		"dbaeumer.vscode-eslint"
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode"
 	],
 	"remoteUser": "node"
 }
