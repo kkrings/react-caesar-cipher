@@ -1,14 +1,16 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createRoot } from 'react-dom/client';
 import { CssBaseline } from '@mui/material';
 import { deDE } from '@mui/material/locale';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { App } from './App';
 import { reportWebVitals } from './reportWebVitals';
 
+const container = document.getElementById('root');
+const root = container && createRoot(container);
 const theme = createTheme(undefined, deDE);
 
-ReactDOM.render(
+root?.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <>
@@ -17,7 +19,6 @@ ReactDOM.render(
       </>
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
