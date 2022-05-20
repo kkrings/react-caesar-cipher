@@ -18,10 +18,11 @@ export function CipherAppBar() {
           aria-controls="info-popup"
           aria-haspopup="true"
           color="inherit"
-          onClick={
-            (event) => setInfoAnchor(infoAnchor === null ? event.currentTarget : null)
+          onClick={(event) =>
+            setInfoAnchor(infoAnchor === null ? event.currentTarget : null)
           }
-          size="large">
+          size="large"
+        >
           <Info />
         </IconButton>
         <Popper
@@ -29,12 +30,15 @@ export function CipherAppBar() {
           anchorEl={infoAnchor}
           open={infoAnchor !== null}
         >
-          <CipherAppBarInfoMenu onCloseButtonClick={() => setInfoAnchor(null)} />
+          <CipherAppBarInfoMenu
+            onCloseButtonClick={() => setInfoAnchor(null)}
+          />
         </Popper>
         <IconButton
           color="inherit"
           href="https://github.com/kkrings/react-caesar-cipher"
-          size="large">
+          size="large"
+        >
           <GitHub />
         </IconButton>
       </Toolbar>

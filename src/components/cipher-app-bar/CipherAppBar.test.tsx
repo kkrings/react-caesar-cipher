@@ -9,7 +9,7 @@ describe('CipherAppBar', () => {
   });
 
   it('info popup should be closed', () => {
-    expect(screen.queryByRole('tooltip')).toBeNull()
+    expect(screen.queryByRole('tooltip')).toBeNull();
   });
 
   describe('click on info button', () => {
@@ -18,19 +18,19 @@ describe('CipherAppBar', () => {
     });
 
     it('info popup should have been opened', () => {
-      expect(screen.queryByRole('tooltip')).toBeInTheDocument()
+      expect(screen.getByRole('tooltip')).toBeInTheDocument();
     });
   });
 
   describe('click on info button when info popup is open', () => {
     beforeEach(() => {
-      const button = screen.getByLabelText('Datenschutzerklärung, Lizenz')
+      const button = screen.getByLabelText('Datenschutzerklärung, Lizenz');
       userEvent.click(button);
       userEvent.click(button);
     });
 
     it('info popup should have been closed', () => {
-      expect(screen.queryByRole('tooltip')).toBeNull()
+      expect(screen.queryByRole('tooltip')).toBeNull();
     });
   });
 
@@ -44,7 +44,7 @@ describe('CipherAppBar', () => {
     });
 
     it('info popup should have been closed', () => {
-      expect(screen.queryByRole('tooltip')).toBeNull()
+      expect(screen.queryByRole('tooltip')).toBeNull();
     });
   });
 });

@@ -5,7 +5,7 @@ export class CipherService {
 
   transformMessage(message: string): string {
     return Array.from(message)
-      .map(letter => this.tryTransformLetter(letter))
+      .map((letter) => this.tryTransformLetter(letter))
       .join('');
   }
 
@@ -24,9 +24,8 @@ export class CipherService {
   private transformLatinLetter(letter: string, offset: string): string {
     const charCodeOffset = offset.charCodeAt(0);
 
-    let shift = (
-      (letter.charCodeAt(0) - charCodeOffset + this.shift) % numLatinLetters
-    );
+    let shift =
+      (letter.charCodeAt(0) - charCodeOffset + this.shift) % numLatinLetters;
 
     shift = shift >= 0 ? shift : numLatinLetters + shift;
 

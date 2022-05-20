@@ -5,12 +5,12 @@ import { CipherMessageInput } from './cipher-message-input/CipherMessageInput';
 import { CipherDirection } from '../../types/CipherDirection';
 
 type CipherMessageProps = {
-  shift: number
+  shift: number;
 };
 
 export function CipherMessage(props: CipherMessageProps) {
   const [cipherDirection, setCipherDirection] = React.useState(
-    CipherDirection.encrypt
+    CipherDirection.encrypt,
   );
 
   return (
@@ -37,10 +37,7 @@ export function CipherMessage(props: CipherMessageProps) {
           value={CipherDirection.decrypt}
         />
       </Tabs>
-      <CipherMessageInput
-        shift={props.shift}
-        direction={cipherDirection}
-      />
+      <CipherMessageInput shift={props.shift} direction={cipherDirection} />
       <div data-testid="shift">
         <strong>Anzahl Verschiebungen:</strong> {props.shift}
       </div>

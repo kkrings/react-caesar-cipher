@@ -5,8 +5,8 @@ import { CipherService } from '../../../services/CipherService';
 import styles from './CipherMessageInput.module.css';
 
 type CipherMessageInputProps = {
-  shift: number,
-  direction: CipherDirection
+  shift: number;
+  direction: CipherDirection;
 };
 
 export function CipherMessageInput(props: CipherMessageInputProps) {
@@ -14,9 +14,7 @@ export function CipherMessageInput(props: CipherMessageInputProps) {
 
   const encrypt = props.direction === CipherDirection.encrypt;
 
-  const cipherService = new CipherService(
-     encrypt ? props.shift : -props.shift
-  );
+  const cipherService = new CipherService(encrypt ? props.shift : -props.shift);
 
   return (
     <Box

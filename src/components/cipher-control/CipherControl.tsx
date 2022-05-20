@@ -3,9 +3,9 @@ import { Box, IconButton } from '@mui/material';
 import { Autorenew, RotateLeft, RotateRight } from '@mui/icons-material';
 
 type CipherControlProps = {
-  onClockwiseRotation: () => void
-  onCounterClockwiseRotation: () => void
-  onReset: () => void
+  onClockwiseRotation: () => void;
+  onCounterClockwiseRotation: () => void;
+  onReset: () => void;
 };
 
 export function CipherControl(props: CipherControlProps) {
@@ -15,14 +15,16 @@ export function CipherControl(props: CipherControlProps) {
         onClick={props.onClockwiseRotation}
         aria-label="Im Uhrzeigersinn"
         aria-controls="cipher-disk"
-        size="large">
+        size="large"
+      >
         <RotateRight />
       </IconButton>
       <IconButton
         onClick={props.onCounterClockwiseRotation}
         aria-label="Gegen den Uhrzeigersinn"
         aria-controls="cipher-disk"
-        size="large">
+        size="large"
+      >
         <RotateLeft />
       </IconButton>
       <IconButton
@@ -30,7 +32,8 @@ export function CipherControl(props: CipherControlProps) {
         aria-label="Auf Anfang"
         aria-controls="cipher-disk"
         color="secondary"
-        size="large">
+        size="large"
+      >
         <Autorenew />
       </IconButton>
     </Box>

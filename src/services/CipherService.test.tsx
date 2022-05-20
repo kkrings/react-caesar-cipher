@@ -5,10 +5,11 @@ describe('CipherService', () => {
 
   const shift = 3;
   const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  const shiftedAlphabet = 'defghijklmnopqrstuvwxyzabcDEFGHIJKLMNOPQRSTUVWXYZABC';
+  const shiftedAlphabet =
+    'defghijklmnopqrstuvwxyzabcDEFGHIJKLMNOPQRSTUVWXYZABC';
 
   describe(`encryption with a shift of ${shift}`, () => {
-    beforeEach(() => cipherService = new CipherService(shift));
+    beforeEach(() => (cipherService = new CipherService(shift)));
 
     it('letters should be correctly shifted', () => {
       expect(cipherService.transformMessage(alphabet)).toEqual(shiftedAlphabet);
@@ -16,7 +17,7 @@ describe('CipherService', () => {
   });
 
   describe(`decryption with a shift of ${shift}`, () => {
-    beforeEach(() => cipherService = new CipherService(-shift));
+    beforeEach(() => (cipherService = new CipherService(-shift)));
 
     it('shifted letters should be correctly shifted back', () => {
       expect(cipherService.transformMessage(shiftedAlphabet)).toEqual(alphabet);
@@ -26,10 +27,12 @@ describe('CipherService', () => {
   describe('non-latin letters', () => {
     const otherLetters = 'äöüßÄÖÜ ,.;:!?';
 
-    beforeEach(() => cipherService = new CipherService(shift));
+    beforeEach(() => (cipherService = new CipherService(shift)));
 
     it('should not be shifted', () => {
-      expect(cipherService.transformMessage(otherLetters)).toEqual(otherLetters);
+      expect(cipherService.transformMessage(otherLetters)).toEqual(
+        otherLetters,
+      );
     });
   });
 });

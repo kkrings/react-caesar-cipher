@@ -1,7 +1,7 @@
 import * as React from 'react';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
-import { CipherControl }  from './CipherControl';
+import { CipherControl } from './CipherControl';
 
 describe('CipherControl', () => {
   it('onClockwiseRotation should have been called', () => {
@@ -12,7 +12,7 @@ describe('CipherControl', () => {
         onClockwiseRotation={onClockwiseRotation}
         onCounterClockwiseRotation={() => {}}
         onReset={() => {}}
-      />
+      />,
     );
 
     userEvent.click(screen.getByLabelText('Im Uhrzeigersinn'));
@@ -27,7 +27,7 @@ describe('CipherControl', () => {
         onClockwiseRotation={() => {}}
         onCounterClockwiseRotation={onCounterClockwiseRotation}
         onReset={() => {}}
-      />
+      />,
     );
 
     userEvent.click(screen.getByLabelText('Gegen den Uhrzeigersinn'));
@@ -42,7 +42,7 @@ describe('CipherControl', () => {
         onClockwiseRotation={() => {}}
         onCounterClockwiseRotation={() => {}}
         onReset={onReset}
-      />
+      />,
     );
 
     userEvent.click(screen.getByLabelText('Auf Anfang'));

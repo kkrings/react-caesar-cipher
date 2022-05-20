@@ -7,7 +7,9 @@ describe('CipherAppBarInfoMenu', () => {
   const handleOnCloseButtonClick = jest.fn();
 
   beforeEach(() => {
-    render(<CipherAppBarInfoMenu onCloseButtonClick={handleOnCloseButtonClick} />);
+    render(
+      <CipherAppBarInfoMenu onCloseButtonClick={handleOnCloseButtonClick} />,
+    );
   });
 
   beforeEach(() => {

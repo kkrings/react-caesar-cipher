@@ -5,7 +5,7 @@ import cipherInnerDisk from './CipherInnerDisk.png';
 import styles from './CipherDisks.module.css';
 
 type CipherDisksProps = {
-  angleDeg: number
+  angleDeg: number;
 };
 
 export function CipherDisks(props: CipherDisksProps) {

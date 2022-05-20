@@ -9,22 +9,20 @@ describe('CipherMessageInput', () => {
   const shift = 1;
   const message = 'some secret message';
 
-  const renderCipherMessageInput = (direction: CipherDirection) => render(
-    <CipherMessageInput
-      shift={shift}
-      direction={direction}
-    />
-  );
+  const renderCipherMessageInput = (direction: CipherDirection) =>
+    render(<CipherMessageInput shift={shift} direction={direction} />);
 
-  const typeSecretMessage = () => userEvent.type(
-    screen.getByLabelText('Geheime Nachricht'), message
-  );
+  const typeSecretMessage = () =>
+    userEvent.type(screen.getByLabelText('Geheime Nachricht'), message);
 
   const checkForTextField = (label: string) => {
-    expect(screen.queryByLabelText(label)).toBeInTheDocument()
+    expect(screen.getByLabelText(label)).toBeInTheDocument();
   };
 
-  const checkForTransformedMessage = (label: string, service: CipherService) => {
+  const checkForTransformedMessage = (
+    label: string,
+    service: CipherService,
+  ) => {
     const value = service.transformMessage(message);
     expect(screen.getByLabelText(label)).toHaveValue(value);
   };

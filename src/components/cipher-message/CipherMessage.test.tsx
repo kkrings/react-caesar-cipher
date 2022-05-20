@@ -17,25 +17,25 @@ describe('CipherMessage', () => {
     });
 
     it('should be encrypted', () => {
-      userEvent.click(screen.getByText('Verschlüsseln'))
+      userEvent.click(screen.getByText('Verschlüsseln'));
 
       expect(screen.getByLabelText('Verschlüsselte Nachricht')).toHaveValue(
-        new CipherService(shift).transformMessage(message)
+        new CipherService(shift).transformMessage(message),
       );
     });
 
     it('should be decrypted', () => {
-      userEvent.click(screen.getByText('Entschlüsseln'))
+      userEvent.click(screen.getByText('Entschlüsseln'));
 
       expect(screen.getByLabelText('Entschlüsselte Nachricht')).toHaveValue(
-        new CipherService(-shift).transformMessage(message)
+        new CipherService(-shift).transformMessage(message),
       );
     });
   });
 
   it('shift should be rendered', () => {
-    expect(screen.getByTestId("shift").textContent).toMatch(
-      `Anzahl Verschiebungen: ${shift}`
+    expect(screen.getByTestId('shift').textContent).toMatch(
+      `Anzahl Verschiebungen: ${shift}`,
     );
   });
 });

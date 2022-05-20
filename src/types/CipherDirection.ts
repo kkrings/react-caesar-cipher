@@ -1,4 +1,4 @@
 export enum CipherDirection {
   encrypt,
-  decrypt
+  decrypt,
 }

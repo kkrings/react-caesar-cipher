@@ -10,6 +10,8 @@ describe('CipherDisks', () => {
   });
 
   it('style should contain transform property', () => {
-    expect(screen.getByRole('img')).toHaveStyle({transform: `rotate(${angleDeg}deg)`});
+    expect(screen.getByRole('img')).toHaveStyle({
+      transform: `rotate(${angleDeg}deg)`,
+    });
   });
 });

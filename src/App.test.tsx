@@ -1,7 +1,7 @@
 import * as React from 'react';
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
-import { App }  from './App';
+import { App } from './App';
 import { numLatinLetters } from './services/CipherService';
 
 describe('App', () => {
@@ -10,7 +10,9 @@ describe('App', () => {
   const angleDeg = 360 / numLatinLetters;
 
   beforeEach(() => render(<App />));
-  beforeEach(() => userEvent.type(screen.getByLabelText('Geheime Nachricht'), message));
+  beforeEach(() =>
+    userEvent.type(screen.getByLabelText('Geheime Nachricht'), message),
+  );
 
   describe('click counter-clockwise rotation button once', () => {
     const encryptedMessage = 'BCD';
@@ -22,19 +24,19 @@ describe('App', () => {
 
     it('cipher disk should have been rotated counter-clockwise', () => {
       expect(screen.getByRole('img')).toHaveStyle({
-        transform: `rotate(-${angleDeg}deg)`
+        transform: `rotate(-${angleDeg}deg)`,
       });
     });
 
     it(`shift of ${expectedShift} should have been rendered`, () => {
       expect(screen.getByTestId('shift').textContent).toMatch(
-        `Anzahl Verschiebungen: ${expectedShift}`
+        `Anzahl Verschiebungen: ${expectedShift}`,
       );
     });
 
     it(`${message} should have been encrypted to ${encryptedMessage}`, () => {
       expect(screen.getByLabelText('Verschlüsselte Nachricht')).toHaveValue(
-        encryptedMessage
+        encryptedMessage,
       );
     });
   });
@@ -49,19 +51,19 @@ describe('App', () => {
 
     it('cipher disk should have been rotated clockwise', () => {
       expect(screen.getByRole('img')).toHaveStyle({
-        transform: `rotate(${angleDeg}deg)`
+        transform: `rotate(${angleDeg}deg)`,
       });
     });
 
     it(`shift of ${expectedShift} should have been rendered`, () => {
       expect(screen.getByTestId('shift').textContent).toMatch(
-        `Anzahl Verschiebungen: ${expectedShift}`
+        `Anzahl Verschiebungen: ${expectedShift}`,
       );
     });
 
     it(`${message} should have been encrypted to ${encryptedMessage}`, () => {
       expect(screen.getByLabelText('Verschlüsselte Nachricht')).toHaveValue(
-        encryptedMessage
+        encryptedMessage,
       );
     });
   });
@@ -80,19 +82,19 @@ describe('App', () => {
 
     it('cipher disk should have been rotated back to zero', () => {
       expect(screen.getByRole('img')).toHaveStyle({
-        transform: 'rotate(0deg)'
+        transform: 'rotate(0deg)',
       });
     });
 
     it(`shift of ${expectedShift} should have been rendered`, () => {
       expect(screen.getByTestId('shift').textContent).toMatch(
-        `Anzahl Verschiebungen: ${expectedShift}`
+        `Anzahl Verschiebungen: ${expectedShift}`,
       );
     });
 
     it(`${message} should have been encrypted to ${encryptedMessage}`, () => {
       expect(screen.getByLabelText('Verschlüsselte Nachricht')).toHaveValue(
-        encryptedMessage
+        encryptedMessage,
       );
     });
   });
@@ -111,19 +113,19 @@ describe('App', () => {
 
     it('cipher disk should have been rotated back to zero', () => {
       expect(screen.getByRole('img')).toHaveStyle({
-        transform: 'rotate(0deg)'
+        transform: 'rotate(0deg)',
       });
     });
 
     it(`shift of ${expectedShift} should have been rendered`, () => {
       expect(screen.getByTestId('shift').textContent).toMatch(
-        `Anzahl Verschiebungen: ${expectedShift}`
+        `Anzahl Verschiebungen: ${expectedShift}`,
       );
     });
 
     it(`${message} should have been encrypted to ${encryptedMessage}`, () => {
       expect(screen.getByLabelText('Verschlüsselte Nachricht')).toHaveValue(
-        encryptedMessage
+        encryptedMessage,
       );
     });
   });
