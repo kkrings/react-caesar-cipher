@@ -17,7 +17,7 @@ test('rotate clockwise', async () => {
   expect(onClockwiseRotation).toBeCalledTimes(1);
 });
 
-it('rotate counter-clockwise', async () => {
+test('rotate counter-clockwise', async () => {
   const user = userEvent.setup();
   const onCounterClockwiseRotation = jest.fn();
   render(
