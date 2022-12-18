@@ -3,20 +3,12 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { CipherAppBarInfoMenu } from './CipherAppBarInfoMenu';
 
-describe('CipherAppBarInfoMenu', () => {
+test('handleOnCloseButtonClick should have been called', async () => {
+  const user = userEvent.setup();
   const handleOnCloseButtonClick = jest.fn();
-
-  beforeEach(() => {
-    render(
-      <CipherAppBarInfoMenu onCloseButtonClick={handleOnCloseButtonClick} />,
-    );
-  });
-
-  beforeEach(() => {
-    userEvent.click(screen.getByRole('close'));
-  });
-
-  it('handleOnCloseButtonClick should have been called', () => {
-    expect(handleOnCloseButtonClick).toHaveBeenCalledTimes(1);
-  });
+  render(
+    <CipherAppBarInfoMenu onCloseButtonClick={handleOnCloseButtonClick} />,
+  );
+  await user.click(screen.getByRole('close'));
+  expect(handleOnCloseButtonClick).toHaveBeenCalledTimes(1);
 });
