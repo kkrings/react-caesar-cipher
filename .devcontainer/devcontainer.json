@@ -1,9 +1,6 @@
 {
 	"name": "React Ceasar Cipher",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": { "VARIANT": "16-bullseye" }
-	},
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -12,5 +9,4 @@
 			]
 		}
 	},
-	"remoteUser": "node"
 }
