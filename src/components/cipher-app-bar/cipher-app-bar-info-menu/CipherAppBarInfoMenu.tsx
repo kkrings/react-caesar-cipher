@@ -30,10 +30,10 @@ export function CipherAppBarInfoMenu(props: CipherAppBarInfoMenuProps) {
       </Typography>
       <a
         rel="license"
-        href="http://creativecommons.org/publicdomain/zero/1.0/deed.de"
+        href="https://creativecommons.org/publicdomain/zero/1.0/deed.de"
       >
         <img
-          src="http://i.creativecommons.org/p/zero/1.0/88x31.png"
+          src="https://i.creativecommons.org/p/zero/1.0/88x31.png"
           style={{ borderStyle: 'none' }}
           alt="CC0"
         />
