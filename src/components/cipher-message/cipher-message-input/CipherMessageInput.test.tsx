@@ -1,6 +1,5 @@
-import * as React from 'react';
-import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { CipherMessageInput } from './CipherMessageInput';
 import { CipherService } from '../../../services/CipherService';
 import { CipherDirection } from '../../../types/CipherDirection';

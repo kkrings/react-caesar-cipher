@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Box, IconButton, Paper, Typography } from '@mui/material';
 import { Close } from '@mui/icons-material';
 import styles from './CipherAppBarInfoMenu.module.css';

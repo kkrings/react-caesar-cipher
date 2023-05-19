@@ -1,11 +1,11 @@
-import * as React from 'react';
-import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { CipherControl } from './CipherControl';
 
 test('rotate clockwise', async () => {
   const user = userEvent.setup();
-  const onClockwiseRotation = jest.fn();
+  const onClockwiseRotation = vi.fn();
   render(
     <CipherControl
       onClockwiseRotation={onClockwiseRotation}
@@ -19,7 +19,7 @@ test('rotate clockwise', async () => {
 
 test('rotate counter-clockwise', async () => {
   const user = userEvent.setup();
-  const onCounterClockwiseRotation = jest.fn();
+  const onCounterClockwiseRotation = vi.fn();
   render(
     <CipherControl
       onClockwiseRotation={() => {}}
@@ -33,7 +33,7 @@ test('rotate counter-clockwise', async () => {
 
 test('reset', async () => {
   const user = userEvent.setup();
-  const onReset = jest.fn();
+  const onReset = vi.fn();
   render(
     <CipherControl
       onClockwiseRotation={() => {}}

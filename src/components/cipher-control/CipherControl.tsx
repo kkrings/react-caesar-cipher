@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Box, IconButton } from '@mui/material';
 import { Autorenew, RotateLeft, RotateRight } from '@mui/icons-material';
 

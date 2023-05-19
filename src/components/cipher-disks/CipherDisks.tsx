@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Box } from '@mui/material';
 import { ImgRot } from './ImgRot';
 import cipherInnerDisk from './CipherInnerDisk.png';
